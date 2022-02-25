@@ -1,11 +1,51 @@
 import { configureStore } from "@reduxjs/toolkit";
 import calculatorReducer from "./calculator";
 
-export const store = configureStore({
+/* ------------------- */
+
+import {
+  persistStore,
+  persistReducer,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+} from "redux-persist";
+import storage from "redux-persist/lib/storage";
+
+const persistConfig = {
+  key: "root",
+  version: 1,
+  storage,
+};
+
+const persistedReducer = persistReducer(persistConfig, calculatorReducer);
+
+const store = configureStore({
+  reducer: {
+    calculator: persistedReducer,
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
+});
+
+let persistor = persistStore(store);
+
+export { store, persistor };
+
+/* ----------------- */
+
+/* export const store = configureStore({
   reducer: {
     calculator: calculatorReducer,
   },
-});
+}); */
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<typeof store.getState>;

@@ -28,6 +28,7 @@ const HomePage: NextPage = () => {
             {expr && (
               <img className=" fill-white" src={imageSRC} alt="rendered svg" />
             )}
+            <span className="mx-1 w-1 h-5 animate-pulse bg-black"></span>
           </div>
           <div className=" h-16 bg-gray-800 flex items-center justify-start p-4 my-2">
             ANS: &nbsp;
