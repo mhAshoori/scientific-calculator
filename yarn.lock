@@ -1421,11 +1421,6 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-mathjax@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/mathjax/-/mathjax-3.2.0.tgz#ea7c317f8c81776ecfc83b294fc313046bf7f726"
-  integrity sha512-PL+rdYRK4Wxif+SQ94zP/L0sv6/oW/1WdQiIx0Jvn9FZaU5W9E6nlIv8liYAXBNPL2Fw/i+o/mZ1212eSzn0Cw==
-
 mathjs@^10.1.1:
   version "10.1.1"
   resolved "https://registry.npmjs.org/mathjs/-/mathjs-10.1.1.tgz"
