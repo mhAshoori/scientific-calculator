@@ -1,13 +1,19 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useRef } from "react";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import ButtonsContainer from "../components/buttons/buttons-container";
+import { RootState } from "../redux/store";
 
 const HomePage: NextPage = () => {
-  const calculatorInputRef = useRef< any>(null);
-  const clickHandler = () => {
-    console.log(calculatorInputRef.current?.value);
-  };
+  const { expr, ans } = useSelector((state: RootState) => state.calculator);
+  const dispatch = useDispatch();
+
+  const imageSRC = `https://latex.codecogs.com/svg.image?${expr}`;
+  //const [eqSvg, setEqSvg] = useState<any>();
+
+  useEffect(() => {}, [imageSRC, ans]);
+
   return (
     <div>
       <Head>
@@ -18,17 +24,18 @@ const HomePage: NextPage = () => {
       <div className=" h-screen bg-slate-700 text-gray-200">
         <header>this is header</header>
         <main>
-          <input
-            className=" my-3 p-2 rounded-sm bg-slate-900 w-full h-16 text-3xl text-gray-300"
-            type="text"
-            ref={calculatorInputRef}
-            placeholder="add Eq. Here"
-          />
-          <button className=" border-solid " onClick={clickHandler}>
-            Show me the number!
-          </button>
+          <div className=" h-16 bg-slate-300 flex items-center justify-start p-4 my-2">
+            {expr && (
+              <img className=" fill-white" src={imageSRC} alt="rendered svg" />
+            )}
+          </div>
+          <div className=" h-16 bg-gray-800 flex items-center justify-start p-4 my-2">
+            ANS: &nbsp;
+            {ans && <span>{ans}</span>}
+          </div>
+
           <div>
-            <ButtonsContainer/>
+            <ButtonsContainer />
           </div>
         </main>
 
