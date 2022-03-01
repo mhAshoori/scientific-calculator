@@ -15,9 +15,18 @@ const FunctionButtons: FC<IFunctionButtons> = (props) => {
 
   const { expr } = useSelector((state: RootState) => state.calculator);
   const dispatch = useDispatch();
-    const funcsHandler = (input:any)=>{
-        dispatch(addToExpr(input))
+  const funcsHandler = (input: any) => {
+    if (
+      input === "sin" ||
+      input === "cos" ||
+      input === "tan" ||
+      input === "sqrt"
+    ) {
+      dispatch(addToExpr(input + "("));
+      return;
     }
+    dispatch(addToExpr(input));
+  };
   return (
     <div className="flex justify-center items-center gap-3">
       <div className=" grid grid-cols-5  gap-3 my-3 ">
