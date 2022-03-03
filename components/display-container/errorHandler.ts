@@ -29,9 +29,7 @@ export const modifiedErrorHandler: ErrorHandler = {
   // Resolver errors
   functionUnknown: ({ name }) => "",
   functionArgLength: ({ name, minArgs, maxArgs }) =>
-    minArgs === maxArgs
-      ? ``
-      : ``,
+    minArgs === maxArgs ? `` : ``,
   functionNumberOnly: ({ name }) => "",
 
   functionSqrt1Positive: ({ name }) => "",
