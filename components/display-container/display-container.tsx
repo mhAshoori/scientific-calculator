@@ -67,7 +67,7 @@ const DisplayContainer = () => {
           {tempExpression && (
             <>
               <Equation
-                value={tempExpression || "Enter sth"}
+                value={tempExpression}
                 className={equationStyles.incomplete}
                 errorHandler={modifiedErrorHandler}
               />
@@ -75,7 +75,7 @@ const DisplayContainer = () => {
           )}
         </>
       )}
-      <span className="mx-1 w-1 h-5 animate-pulse bg-black"></span>
+      <span className="mx-1 w-px h-5 animate-pulse bg-black"></span>
       <div className=" mx-2" ref={pointerRef}>
         &nbsp;
       </div>
