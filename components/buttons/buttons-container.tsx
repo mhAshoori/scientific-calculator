@@ -5,10 +5,10 @@ import { funcButtons } from "../../data/keys/buttons";
 import FunctionButtons from "./function-buttons";
 const ButtonsContainer: FC = () => {
   return (
-    <div>
+    <>
       <FunctionButtons buttons={funcButtons} />
       <NumsButton buttons={numButtons} />
-    </div>
+    </>
   );
 };
 
