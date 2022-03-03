@@ -10,7 +10,7 @@ const HomePage: NextPage = () => {
     (state: RootState) => state.calculator
   );
   const dispatch = useDispatch();
-  
+
   return (
     <div>
       <Head>
@@ -21,17 +21,15 @@ const HomePage: NextPage = () => {
       <div className=" h-screen bg-slate-700 text-gray-200">
         <header>this is header</header>
         <main>
-          <div className=" h-16 bg-slate-300 flex items-center justify-start p-4 my-2 text-black">
+          <div className=" h-24 w-screen bg-slate-300 flex items-center justify-start p-2 my-2 text-black overflow-x-scroll">
             <DisplayContainer />
-            
-            <span className="mx-1 w-1 h-5 animate-pulse bg-black"></span>
           </div>
           <div className=" h-16 bg-gray-800 flex items-center justify-start p-4 my-2">
             ANS: &nbsp;
             {ans && <span>{ans}</span>}
           </div>
 
-          <div>
+          <div className="  flex justify-center items-center ">
             <ButtonsContainer />
           </div>
         </main>

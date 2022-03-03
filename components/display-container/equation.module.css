@@ -1,3 +1,12 @@
+.equationContainer {
+  white-space: nowrap;
+  height: auto !important;
+  width: auto !important;
+}
 .equationContainer svg {
-    display: inline;
+  display: inline;
+}
+
+.incomplete {
+  white-space: nowrap;
 }
