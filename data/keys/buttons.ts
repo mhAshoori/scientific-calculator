@@ -1,6 +1,3 @@
-/* import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
-import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
-import { FaSquareRootAlt } from "react-icons/fa"; */
 export const numButtons = {
   numbers: [
     { name: "one", value: 1 },
@@ -34,14 +31,6 @@ export const funcButtons = [
   { name: "SHIFT", value: "shift" },
   { name: "ALPHA", value: "alpha" },
   { name: "CALC", value: "calc" },
-  /*{ name: "left", value: "<BsArrowLeft />" },
-  { name: "right", value: "<BsArrowRight />" },
-  { name: "mode", value: "MODE" },
-  { name: "2nd", value: "2nd" },
-  { name: "integral", value: "<div>&#8747;</div>" },
-  { name: "up", value: "<AiFillCaretUp />" },
-  { name: "down", value: "<AiFillCaretDown />" },
-  { name: "down", value: "<AiFillCaretDown />" }, */
   { name: "SQRT", value: "sqrt" },
   { name: "^", value: "^" },
   { name: "SIN", value: "sin" },
@@ -49,4 +38,14 @@ export const funcButtons = [
   { name: "TAN", value: "tan" },
   { name: "(", value: "(" },
   { name: ")", value: ")" },
+  { name: "ASIN", value: "asin" },
+  { name: "ACOS", value: "ACOS" },
+  { name: "ATAN", value: "atan(" },
+  { name: "SINH", value: "sinh(" },
+  { name: "COSH", value: "cosh(" },
+  { name: "LOG", value: "log(" },
+  { name: "LOG10", value: "log10(" },
+  { name: "PI", value: "pi" },
+  { name: "e", value: "e" },
+  { name: "i", value: "" },
 ];
