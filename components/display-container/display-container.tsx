@@ -59,7 +59,7 @@ const DisplayContainer = () => {
       ) : (
         <>
           <Equation
-            value={tempEquation?.join("") || "Enter sth"}
+            value={tempEquation?.join("") || "_"}
             className={equationStyles.equationContainer}
             errorHandler={modifiedErrorHandler}
           />
@@ -76,7 +76,7 @@ const DisplayContainer = () => {
         </>
       )}
       <span className="mx-1 w-px h-5 animate-pulse bg-black"></span>
-      <div className=" mx-2" ref={pointerRef}>
+      <div className=" h-full mx-2" ref={pointerRef}>
         &nbsp;
       </div>
     </div>

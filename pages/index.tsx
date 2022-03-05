@@ -19,9 +19,11 @@ const HomePage: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className=" h-screen bg-slate-700 text-gray-200 overflow-hidden">
-        <header>this is header</header>
-        <main className=" h-full flex flex-col ">
-          <div className=" h-24 w-screen bg-slate-300 flex items-center justify-start p-2 my-2 text-black overflow-x-scroll">
+        <main
+          className=" h-full flex flex-col sm:border-solid sm:border-2 sm:w-10/12 sm:mx-auto sm:rounded-md 
+         md:w-9/12 lg:w-8/12"
+        >
+          <div className=" h-24 w-full bg-slate-300 flex items-center justify-start p-2 my-2 text-black overflow-x-scroll">
             <DisplayContainer />
           </div>
           <div className=" h-16 bg-gray-800 flex items-center justify-start p-4 my-2">
@@ -29,12 +31,10 @@ const HomePage: NextPage = () => {
             {ans && <span>{ans}</span>}
           </div>
 
-          <div className=" mt-auto mb-1">
+          <div className=" mb-auto ">
             <ButtonsContainer />
           </div>
         </main>
-
-        <footer></footer>
       </div>
     </div>
   );

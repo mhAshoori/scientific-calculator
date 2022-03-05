@@ -60,7 +60,7 @@ const NumsButton: FC<INumsButtons> = (props) => {
             return (
               <button
                 key={item.value}
-                className=" rounded-sm  w-14 h-8 bg-blue-700"
+                className=" rounded-sm  w-14 h-8 sm:w-24 sm:h-12 bg-blue-700"
                 onClick={() => numsHandler(item.value)}
               >
                 {item.value}
@@ -73,7 +73,7 @@ const NumsButton: FC<INumsButtons> = (props) => {
             return (
               <button
                 key={item.value}
-                className=" rounded-sm w-14 h-8 bg-blue-700"
+                className=" rounded-sm w-14 h-8 sm:w-24 sm:h-12 bg-blue-700"
                 onClick={() => numsHandler(item.value)}
               >
                 {item.value}
@@ -87,7 +87,7 @@ const NumsButton: FC<INumsButtons> = (props) => {
           return (
             <button
               key={item.value}
-              className=" rounded-sm w-14 h-8 bg-blue-700"
+              className=" rounded-sm w-14 h-8 sm:w-24 sm:h-12 bg-blue-700"
               onClick={() => numsHandler(item.value)}
             >
               {item.value}

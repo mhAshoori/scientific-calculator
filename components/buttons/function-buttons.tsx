@@ -34,7 +34,7 @@ const FunctionButtons: FC<IFunctionButtons> = (props) => {
           return (
             <button
               key={item.value}
-              className=" rounded-sm  w-14 h-8 bg-amber-500"
+              className=" rounded-sm  w-14 h-8 sm:w-24 sm:h-12 bg-amber-500"
               onClick={() => funcsHandler(item.value)}
             >
               {item.name}
